@@ -8,15 +8,19 @@ print("[wAntiSuicide] Loading...")
 -- wAnti-Suicide, built by WaviestBalloon, made for my server (But you can use it)
 -- https://github.com/WaviestBalloon/wAntiSuicide
 
+local debuggingthingy = false
 
 --[[	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	WARNING! DON'T CHANGE ANYTHING BELOW, UNLESS YOU KNOW WHAT YOU'RE DOING
 	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!		]]
-
-local SuicideMessage = CreateConVar("was_message", "This server does not allow the kill command!", {FCVAR_SERVER_CAN_EXECUTE})
-local PlaySound = CreateConVar("was_toggle_playsound", false, {FCVAR_SERVER_CAN_EXECUTE})
-local Sound = CreateConVar("was_playsound_loc", "buttons/button2.wav", {FCVAR_SERVER_CAN_EXECUTE})
-local CanSuicide = CreateConVar("was_toggle_antisuicide", true, {FCVAR_SERVER_CAN_EXECUTE})
+CreateConVar("was_message", "This server does not allow the kill command!", {FCVAR_SERVER_CAN_EXECUTE})
+CreateConVar("was_toggle_playsound", false, {FCVAR_SERVER_CAN_EXECUTE})
+CreateConVar("was_playsound_loc", "buttons/button2.wav", {FCVAR_SERVER_CAN_EXECUTE})
+CreateConVar("was_toggle_antisuicide", true, {FCVAR_SERVER_CAN_EXECUTE})
+local SuicideMessage = GetConVar("was_message")
+local PlaySound = GetConVar("was_toggle_playsound")
+local Sound = GetConVar("was_playsound_loc")
+local CanSuicide = GetConVar("was_toggle_antisuicide")
 
 if CanSuicide == true then
 	print("[wAnti-Suicide] 'CanSuicide' = true; this means players will be allowed to suicide")
@@ -51,4 +55,11 @@ end
 print("[wAnti-Suicide] Adding hook")
 hook.Add("CanPlayerSuicide", "BlockSuicide", BlockSuicide)
 print("[wAnti-Suicide] Hook added")
+if debuggingthingy == true then
+	print("wAnti-Suicide Config")
+	print("Suicide message = ".. SuicideMessage)
+	print("Play error sound = ".. PlaySound)
+	print("Sound location = ".. Sound)
+	print("Can suicide = ".. CanSuicide)
+end
 print("[wAnti-Suicide] Script loaded")
