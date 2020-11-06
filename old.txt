@@ -1,0 +1,28 @@
+
+[b]The add-on will be much more customisable in future times but for now you can do the following:[/b]
+- Turn on or off the Anti-Suicide (Which most Anti-Suicides don't have)
+- Change the message printed in console and also in chat
+[b]To come in the future: [/b]
+- Change colour of the message in chat
+- A GUI (So you don't have to extract the .GMA file)
+- A warn sound (Plays a sound when they attempt to do 'kill' in console)
+
+[i]How do I change the message?[/i]
+[b]> To change the message you need to, 1. Extract the .GMA file or 2. Download the code via GitHub, GitHub is faster and not much of a hassle to use. [url=https://github.com/Waviestballoonx9/wAntiSuicide]GitHub Download[/url]
+Once you got the file go to the following: [/b]
+[code]w_anti_suicide -> lua -> autorun -> mainscript.lua[/code] [b]and then you should see the following...[/b]
+[img]https://i.ibb.co/VHyZCnb/Screenshot-10.png[/img]
+[b]I've labelled the arrows.[/b]
+
+[i]Why do I get this in my console?[/i]
+[img]https://i.ibb.co/VYzTZsn/Screenshot-11.png[/img]
+[b]> This means that you haven't put either 'true' or 'false' in the config part in the code, here is a example:[/b]
+[img]https://i.ibb.co/kgKJrmc/Screenshot-12.png[/img]
+[b]By default it's 'false'[/b]
+
+[h1]Need help?[/h1]
+If you changed anything that isn't the config then I will not help you, but if it is anything with the config or the addon then drop the error (From your console) into the comments.
+
+[h1]Here is my server's website if you want to join me, http://waviestnetworks.waviestballoon.uk[/h1]
+[h1]Thank you so much![/h1]
+Note: This is my first time posting to the workshop, please tell me how I can improve!
