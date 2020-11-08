@@ -13,6 +13,7 @@ local debuggingthingy = false
 --[[	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	WARNING! DON'T CHANGE ANYTHING BELOW, UNLESS YOU KNOW WHAT YOU'RE DOING
 	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!		]]
+
 CreateConVar("was_message", "This server does not allow the kill command!", {FCVAR_SERVER_CAN_EXECUTE})
 CreateConVar("was_toggle_playsound", false, {FCVAR_SERVER_CAN_EXECUTE})
 CreateConVar("was_playsound_loc", "buttons/button2.wav", {FCVAR_SERVER_CAN_EXECUTE})
