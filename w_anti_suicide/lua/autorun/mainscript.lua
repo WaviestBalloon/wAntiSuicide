@@ -16,7 +16,7 @@ local debuggingthingy = false
 CreateConVar("was_message", "This server does not allow the kill command!", {FCVAR_SERVER_CAN_EXECUTE})
 CreateConVar("was_toggle_playsound", false, {FCVAR_SERVER_CAN_EXECUTE})
 CreateConVar("was_playsound_loc", "buttons/button2.wav", {FCVAR_SERVER_CAN_EXECUTE})
-CreateConVar("was_toggle_antisuicide", true, {FCVAR_SERVER_CAN_EXECUTE})
+CreateConVar("was_toggle_antisuicide", 1, {FCVAR_SERVER_CAN_EXECUTE})
 local SuicideMessage = GetConVar("was_message")
 local PlaySound = GetConVar("was_toggle_playsound")
 local Sound = GetConVar("was_playsound_loc")
@@ -33,7 +33,7 @@ else
 end
 
 local function BlockSuicide(ply)
-	if CanSuicide == false then
+	if CanSuicide == 1 then
 		print("[wAnti-Suicide] Player attempted a kill command; blocked due to 'CanSuicide' = false")
 		ply:ChatPrint(SuicideMessage)
 		print("[wAnti-Suicide] Suicide Message printed")
@@ -42,7 +42,7 @@ local function BlockSuicide(ply)
 		end
 		return false
 	else
-		if CanSuicide == true then
+		if CanSuicide == 1 then
 			print("[wAnti-Suicide] 'CanSuicide' = true; Suicide is allowed, not blocking")
 		else
 			print("[wAnti-Suicide] Error! Something isn't right; 'CanSuicide' doesn't equal to true or false")
