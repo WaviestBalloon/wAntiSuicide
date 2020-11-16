@@ -8,7 +8,7 @@ print("[wAntiSuicide] Loading...")
 -- wAnti-Suicide, built by WaviestBalloon, made for my server (But you can use it)
 -- https://github.com/WaviestBalloon/wAntiSuicide
 
-local debuggingthingy = false
+local debuggingthingy = false -- Used for degugging the thingy
 
 --[[	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	WARNING! DON'T CHANGE ANYTHING BELOW, UNLESS YOU KNOW WHAT YOU'RE DOING
@@ -51,8 +51,6 @@ local function BlockSuicide(ply)
 	end
 end
 
--- HAH! NO COMMENTS EXPLAINING THE CODE! TAKE THAT COMPUTER SCIENCE COURSE!
-
 print("[wAnti-Suicide] Adding hook")
 hook.Add("CanPlayerSuicide", "BlockSuicide", BlockSuicide)
 print("[wAnti-Suicide] Hook added")
@@ -62,5 +60,6 @@ if debuggingthingy == true then
 	print("Play error sound = ".. PlaySound)
 	print("Sound location = ".. Sound)
 	print("Can suicide = ".. CanSuicide)
+	print("End!")
 end
 print("[wAnti-Suicide] Script loaded")
